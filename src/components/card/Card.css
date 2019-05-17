@@ -52,6 +52,7 @@ img:hover {
   border: none;
   border-bottom: 0.6em solid #146a20;
   outline: none;
+  cursor: pointer;
 }
 
 .card-buttons button:hover {
