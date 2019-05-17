@@ -1,0 +1,16 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.card-listing-network-error,
+.card-listing-loading,
+.card-listing-no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245, 209, 71);
+  height: 10em;
+  font-size: 100%;
+  border-radius: 0.5em;
+}

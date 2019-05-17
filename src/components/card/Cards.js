@@ -1,7 +1,7 @@
 import React from "react";
-import { GET_HOME_CARDS_QUERY } from "../../apollo";
+import { GET_HOME_CARD_IDS_QUERY } from "../../apollo";
 import { Query } from "react-apollo";
-import Card from "./Card";
+import { CardListing } from "./CardListing";
 import "./Cards.css";
 
 export const NetworkError = () => (
@@ -11,7 +11,7 @@ export const NoCardData = () => <div className="no-data">No results</div>;
 export const Loading = () => <p className="loading">Loading...</p>;
 
 export const Cards = () => (
-  <Query query={GET_HOME_CARDS_QUERY}>
+  <Query query={GET_HOME_CARD_IDS_QUERY}>
     {({ loading, error, data }) => {
       // handle error
       if (error) {
@@ -20,13 +20,13 @@ export const Cards = () => (
         // handle loading
         if (loading) return <Loading />;
         // handle no data
-        if (!data.homeCards.length) return <NoCardData />;
+        if (!data.homeCardIds.length) return <NoCardData />;
         // handle no data
-        if (data.homeCards.length) {
+        if (data.homeCardIds.length) {
           return (
             <div className="card-container">
-              {data.homeCards.map((item, index) => (
-                <Card key={`${index}-${item.adId}`} {...item} />
+              {data.homeCardIds.map((item, index) => (
+                <CardListing key={`${index}-${item.id}`} {...item} />
               ))}
             </div>
           );
