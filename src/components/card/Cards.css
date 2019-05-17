@@ -1,0 +1,16 @@
+.network-error,
+.loading,
+.no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245, 209, 71);
+  height: 100vh;
+  font-size: 200%;
+}
+
+.card-container {
+  display: flex;
+  padding: 2em;
+  flex-direction: column;
+}

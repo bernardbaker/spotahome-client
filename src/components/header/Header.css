@@ -1,0 +1,27 @@
+.app-header {
+  display: flex;
+  padding: 0 2em;
+  flex-direction: row;
+}
+
+.title {
+  margin-left: 0;
+  flex: 0.5;
+}
+
+.nav {
+  flex: 0.5;
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  padding: 0.5em;
+}
+
+@media all and (max-width: 500px) {
+  .nav {
+    display: none;
+  }
+}
